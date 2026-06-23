@@ -1,0 +1,8 @@
+{
+  "code": "postman-amd64",
+  "package": "postman",
+  "version": "12.16.1",
+  "architecture": "amd64",
+  "description": "Postman API Platform",
+  "download_url": "https://dl.pstmn.io/download/version/12.16.1/linux64"
+}

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Postman
+Exec=/opt/Postman/app/Postman
+Comment=
+Terminal=false
+PrefersNonDefaultGPU=false
+Icon=/opt/Postman/app/resources/app/assets/icon.png
+Type=Application
+Categories=Development;
+

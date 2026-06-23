@@ -1,0 +1,29 @@
+Label: postman
+Codename: latest
+Date: Tue, 23 Jun 2026 13:49:57 UTC
+Architectures: amd64 arm64
+Components: main
+Changelogs: https://mitinsany.github.io/postman-ppa/changelogs/@CHANGEPATH@
+Description: Postman
+Custom apt repository for Postman (https://www.postman.com/)
+MD5Sum:
+ a9cab1bc0a98ca94630b2a4e80c95188 544 main/binary-amd64/Packages
+ 636d83ca33aef3a439e86ac12020fe53 390 main/binary-amd64/Packages.gz
+ 10e9c92f7959a6ad08a0227198994c20 133 main/binary-amd64/Release
+ 64049c7ecb09375f5b33cdca991f6a21 544 main/binary-arm64/Packages
+ 3b8875c88b2751b56882b29a75dd8362 393 main/binary-arm64/Packages.gz
+ 2b586695b5a89424625646d1e73fb18e 133 main/binary-arm64/Release
+SHA1:
+ e71c484c39a7a50ef9d4785701079231d7173d3c 544 main/binary-amd64/Packages
+ 23869c8f5cfa89b8e93e4d9676ce85225eddd97e 390 main/binary-amd64/Packages.gz
+ ee594c7b6231f7f6843bbf59ad94dc036e799bb8 133 main/binary-amd64/Release
+ 7cba44af40fc1b0a3565e683d4119f326b700a16 544 main/binary-arm64/Packages
+ e119432fe34006ab06401fc4b9ac73373fa5a1a4 393 main/binary-arm64/Packages.gz
+ 82902ae11650845b99e5f320f0e6e42e96c29ff5 133 main/binary-arm64/Release
+SHA256:
+ 24281a25e719adfc7667883492738d4c6b32cba7425f1893ade006794a1960f3 544 main/binary-amd64/Packages
+ 88b03169df2fc870dc2c3a60020508d17bc2bbe79abbad4be10a91d1ad3ca050 390 main/binary-amd64/Packages.gz
+ 56e5151f1dc03c3df2692545ad00cdacaf419474ecda8ed6ac004dccacdcc4cb 133 main/binary-amd64/Release
+ 39d4f7081130dace20b220f6d264a3ecf1650bf4f30ccb4b773b83c21fa778ad 544 main/binary-arm64/Packages
+ 7f9e016524d39005e17b87c418b53e0f45eb949165e6ae563ecfa4c801aba18b 393 main/binary-arm64/Packages.gz
+ 92f0a67052ba3bb110a1c4c8eec139aedb2d6854284122e88f40738276ee67be 133 main/binary-arm64/Release

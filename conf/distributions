@@ -1,0 +1,8 @@
+Label: postman
+Codename: latest
+Architectures: amd64 arm64
+Components: main
+Description: Postman
+ Custom apt repository for Postman (https://www.postman.com/)
+Changelogs: https://mitinsany.github.io/postman-ppa/changelogs/@CHANGEPATH@
+SignWith: CD6A40A8B589F734

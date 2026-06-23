@@ -1,0 +1,6 @@
+commit.txt
+.misc/
+*.dsc
+*.asc
+*.log
+version-update.json

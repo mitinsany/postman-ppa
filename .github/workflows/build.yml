@@ -1,0 +1,47 @@
+name: Build & Publish
+on:
+  schedule:
+    - cron: "0 4/6 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    env:
+      ENCRYPTED_KEY: ${{ secrets.ENCRYPTED_KEY }}
+      ENCRYPTED_IV: ${{ secrets.ENCRYPTED_IV }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Install dependencies
+        run: sudo ./scripts/docker/install-dependencies.sh
+
+      - name: Do key handling
+        run: ./scripts/docker/decrypt.sh
+
+      - name: Update packages
+        run: ./scripts/update-packages.sh
+
+      - name: Validate repository metadata
+        run: ./scripts/validate-release-integrity.sh
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Create commit variable
+        run: |
+          echo 'GIT_COMMIT_MSG<<EOF' >> $GITHUB_ENV
+          echo -e 'Package updates!\n' >> $GITHUB_ENV
+          [ -f commit.txt ] && cat commit.txt >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+
+      - name: Update repo
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: "${{ env.GIT_COMMIT_MSG }}"
+          branch: main
+          file_pattern: db deb packages changelogs conf scripts
+

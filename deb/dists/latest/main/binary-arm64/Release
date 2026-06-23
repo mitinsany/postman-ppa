@@ -1,0 +1,5 @@
+Component: main
+Label: postman
+Architecture: arm64
+Description: Postman
+Custom apt repository for Postman (https://www.postman.com/)
