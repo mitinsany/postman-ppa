@@ -34,12 +34,12 @@ update_package_template() {
     local version="$2"
     local download_url="$3"
     local package_json="${package_dir}/package.json"
-    local preinstall="${package_dir}/preinstall"
+    local postinstall="${package_dir}/postinstall"
 
     jq ".version = \"${version}\" | .download_url = \"${download_url}\"" "${package_json}" > version-update.json
     mv version-update.json "${package_json}"
 
-    sed -i "s|^POSTMAN_DOWNLOAD_URL=.*|POSTMAN_DOWNLOAD_URL=\"${download_url}\"|" "${preinstall}"
+    sed -i "s|^POSTMAN_DOWNLOAD_URL=.*|POSTMAN_DOWNLOAD_URL=\"${download_url}\"|" "${postinstall}"
 }
 
 compare_version() {
@@ -115,4 +115,3 @@ if [ -s "commit.txt" ]; then
 else
     echo "[I] No package updates detected. Skipping repository metadata export/sign."
 fi
-

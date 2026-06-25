@@ -1,0 +1,6 @@
+## Postman 12.16.2-2
+June 25, 2026
+
+### Packaging Fixes
+Move `/opt/Postman`, wrapper, and desktop launcher creation into `postinst` so upgrades from older broken packages restore files after the old `postrm` runs.
+

@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+POSTMAN_DOWNLOAD_URL="https://dl.pstmn.io/download/version/12.16.2/linux64"
+tmp_dir="$(mktemp -d)"
+archive="${tmp_dir}/postman.tar.gz"
+
+cleanup() {
+    rm -rf "${tmp_dir}"
+}
+trap cleanup EXIT
+
+curl -fL "${POSTMAN_DOWNLOAD_URL}" -o "${archive}"
+rm -rf /opt/Postman
+mkdir -p /opt
+tar -xzf "${archive}" -C /opt
+
+if [ ! -x /opt/Postman/app/Postman ]; then
+    >&2 echo "[E] Postman binary was not installed at /opt/Postman/app/Postman"
+    exit 1
+fi
+
+install -d /usr/local/bin /usr/share/applications
+cat > /usr/local/bin/postman <<'EOF'
+#!/usr/bin/env bash
+
+exec /opt/Postman/app/Postman "$@"
+EOF
+chmod 0755 /usr/local/bin/postman
+
+cat > /usr/share/applications/postman.desktop <<'EOF'
+[Desktop Entry]
+Name=Postman
+Exec=/opt/Postman/app/Postman
+Comment=
+Terminal=false
+PrefersNonDefaultGPU=false
+Icon=/opt/Postman/app/resources/app/assets/icon.png
+Type=Application
+Categories=Development;
+EOF
+chmod 0644 /usr/share/applications/postman.desktop

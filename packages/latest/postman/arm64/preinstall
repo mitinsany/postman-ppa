@@ -2,22 +2,4 @@
 
 set -euo pipefail
 
-POSTMAN_DOWNLOAD_URL="https://dl.pstmn.io/download/version/12.16.2/linux_arm64"
-tmp_dir="$(mktemp -d)"
-archive="${tmp_dir}/postman.tar.gz"
-
-cleanup() {
-    rm -rf "${tmp_dir}"
-}
-trap cleanup EXIT
-
-curl -fL "${POSTMAN_DOWNLOAD_URL}" -o "${archive}"
 rm -rf /opt/Postman
-mkdir -p /opt
-tar -xzf "${archive}" -C /opt
-
-if [ ! -x /opt/Postman/app/Postman ]; then
-    >&2 echo "[E] Postman binary was not installed at /opt/Postman/app/Postman"
-    exit 1
-fi
-

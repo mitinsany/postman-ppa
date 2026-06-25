@@ -52,7 +52,7 @@ fpm -t deb \
     --package "${OUTPUT_DIR}" \
     --description "${DESCRIPTION}" \
     --before-install "${PACKAGE_DIR}/preinstall" \
+    --after-install "${PACKAGE_DIR}/postinstall" \
     --after-remove "${PACKAGE_DIR}/postremove" \
     --deb-no-default-config-files \
     .
-

@@ -2,7 +2,10 @@
 
 set -euo pipefail
 
-rm -rf /opt/Postman
-rm -f /usr/local/bin/postman
-rm -f /usr/share/applications/postman.desktop
-
+case "${1:-}" in
+    remove|purge)
+        rm -rf /opt/Postman
+        rm -f /usr/local/bin/postman
+        rm -f /usr/share/applications/postman.desktop
+        ;;
+esac
