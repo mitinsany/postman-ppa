@@ -4,6 +4,9 @@ on:
     - cron: "0 4/6 * * *"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-24.04
@@ -44,4 +47,3 @@ jobs:
           commit_message: "${{ env.GIT_COMMIT_MSG }}"
           branch: main
           file_pattern: db deb packages changelogs conf scripts
-
