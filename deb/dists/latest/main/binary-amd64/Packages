@@ -1,18 +1,18 @@
 Package: postman
-Version: 12.16.1
+Version: 12.16.2
 License: Postman Terms
 Vendor: https://www.postman.com/
 Architecture: amd64
 Maintainer: Aleksandr Mitin <mitinsoft@gmail.com>
-Installed-Size: 152067
+Installed-Size: 152075
 Pre-Depends: curl, tar, gzip
 Homepage: https://www.postman.com/
 Priority: optional
 Section: devel
-Filename: pool/main/p/postman/postman_12.16.1_amd64.deb
-Size: 1686
-SHA256: 78a782df4e39252dde81fc8b795ce648f47b563cdec9da360c1ebe01601d3697
-SHA1: ecb9c6ed5484ed558b7957d940f3b9d9d1d2ca0a
-MD5sum: 03e97782d1fc67477d33f7c3790c566f
+Filename: pool/main/p/postman/postman_12.16.2_amd64.deb
+Size: 1666
+SHA256: 28b185bf360fbaf96f0371b76fb8b9051a0969f3fce53c353cfbc16642ed6323
+SHA1: e249784ba521ee4744c970ccc3cdf951d3f408ee
+MD5sum: 7cf2932afff789a787802daa383ef155
 Description: Postman API Platform
 
