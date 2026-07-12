@@ -4,6 +4,6 @@ Exec=/opt/Postman/app/Postman
 Comment=
 Terminal=false
 PrefersNonDefaultGPU=false
-Icon=postman
+Icon=/usr/share/pixmaps/postman.png
 Type=Application
 Categories=Development;

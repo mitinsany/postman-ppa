@@ -1,0 +1,3 @@
+Postman 12.18.5 package revision 2
+
+- Use the absolute /usr/share/pixmaps/postman.png icon path in the desktop entry.
