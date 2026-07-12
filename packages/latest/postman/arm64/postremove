@@ -7,5 +7,6 @@ case "${1:-}" in
         rm -rf /opt/Postman
         rm -f /usr/local/bin/postman
         rm -f /usr/share/applications/postman.desktop
+        rm -f /usr/share/pixmaps/postman.png
         ;;
 esac

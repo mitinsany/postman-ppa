@@ -4,7 +4,6 @@ Exec=/opt/Postman/app/Postman
 Comment=
 Terminal=false
 PrefersNonDefaultGPU=false
-Icon=/opt/Postman/app/resources/app/assets/icon.png
+Icon=postman
 Type=Application
 Categories=Development;
-

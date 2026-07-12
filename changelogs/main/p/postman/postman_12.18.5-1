@@ -1,0 +1,5 @@
+Postman 12.18.5 package revision 1
+
+- Install the Postman menu icon as /usr/share/pixmaps/postman.png.
+- Use Icon=postman in the desktop entry for reliable Cinnamon/Mint menu rendering.
+- Normalize /opt/Postman ownership to root:root after extracting the official tarball.
