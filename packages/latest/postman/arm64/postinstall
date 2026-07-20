@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-POSTMAN_DOWNLOAD_URL="https://dl.pstmn.io/download/version/12.19.6/linux_arm64"
+POSTMAN_DOWNLOAD_URL="https://dl.pstmn.io/download/version/12.20.0/linux_arm64"
 tmp_dir="$(mktemp -d)"
 archive="${tmp_dir}/postman.tar.gz"
 
