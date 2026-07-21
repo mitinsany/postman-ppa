@@ -1,18 +1,18 @@
 Package: postman
-Version: 12.20.0
+Version: 12.20.1
 License: Postman Terms
 Vendor: https://www.postman.com/
 Architecture: arm64
 Maintainer: Aleksandr Mitin <mitinsoft@gmail.com>
-Installed-Size: 151425
+Installed-Size: 151491
 Pre-Depends: curl, tar, gzip
 Homepage: https://www.postman.com/
 Priority: optional
 Section: devel
-Filename: pool/main/p/postman/postman_12.20.0_arm64.deb
+Filename: pool/main/p/postman/postman_12.20.1_arm64.deb
 Size: 1934
-SHA256: b22b5f047269336c8fb46defa31895cbb45c1481bfe73f2db2530d9dc552d4d3
-SHA1: 078b48a3fd382ba41ae603b63317f1f0611e7e8b
-MD5sum: 3b6e7b0598946ed854c04af8047fa71a
+SHA256: a3a35b6a6ba42a3b9dfb8aa233f3cd71cd69a12e72fb626eca6d6507b4c6c4b4
+SHA1: 79deec442106369cf813cf538583a9ddb6a4e18f
+MD5sum: f370c133237792d851eeec43ed180ee1
 Description: Postman API Platform
 
