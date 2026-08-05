@@ -1,29 +1,29 @@
 Label: postman
 Codename: latest
-Date: Tue, 04 Aug 2026 12:05:13 UTC
+Date: Wed, 05 Aug 2026 12:03:09 UTC
 Architectures: amd64 arm64
 Components: main
 Changelogs: https://mitinsany.github.io/postman-ppa/changelogs/@CHANGEPATH@
 Description: Postman
 Custom apt repository for Postman (https://www.postman.com/)
 MD5Sum:
- 8ec342ef1b597cae36db6e63e64ec22a 544 main/binary-amd64/Packages
- a60f896c0b311bf8d0b93318f94ce0e0 390 main/binary-amd64/Packages.gz
+ 67ce7e505ff8ce92a590f4965b492b62 544 main/binary-amd64/Packages
+ 998b759cdd33f4055280631e5960e1be 389 main/binary-amd64/Packages.gz
  10e9c92f7959a6ad08a0227198994c20 133 main/binary-amd64/Release
- be9bb2e0a87ceba28b94ecb3481a9c78 544 main/binary-arm64/Packages
- c55d3a4608b4c8cf1a1176f21e3178c8 390 main/binary-arm64/Packages.gz
+ 8b939511b53fd106c5d26297d56dba32 544 main/binary-arm64/Packages
+ 54f029cedd43614620fe7af5580e661f 391 main/binary-arm64/Packages.gz
  2b586695b5a89424625646d1e73fb18e 133 main/binary-arm64/Release
 SHA1:
- 2b26d91a79c89cebec11f9edb51c6529046b5041 544 main/binary-amd64/Packages
- e7285c2415acd58155d2be1491b543af2d46a638 390 main/binary-amd64/Packages.gz
+ 26cce8d946a4a54de0798185b7accf6b8f4b01c6 544 main/binary-amd64/Packages
+ 5e9248ecc6152f02aa1d91b067f33a1564d898c7 389 main/binary-amd64/Packages.gz
  ee594c7b6231f7f6843bbf59ad94dc036e799bb8 133 main/binary-amd64/Release
- bfe7759ce7c2e7357967027a442c4468b911c269 544 main/binary-arm64/Packages
- 5d6bdf4d71fdf2a2802ea7082b20aad906092a77 390 main/binary-arm64/Packages.gz
+ a2b94f87832efbee01ce1c54dbe6d003b72bb8d6 544 main/binary-arm64/Packages
+ 0e560f9e36d7230aa226e09ee6223149ed0ceeec 391 main/binary-arm64/Packages.gz
  82902ae11650845b99e5f320f0e6e42e96c29ff5 133 main/binary-arm64/Release
 SHA256:
- 110f2c07631c4226b5f13daf7bd5f4978ee64887bcca9f8120e5ae3851d7634f 544 main/binary-amd64/Packages
- 349503fe69c6321020a987541a7ebe5a558ed2a7d90be227cfb18c703b42befe 390 main/binary-amd64/Packages.gz
+ a1f263e77f0c093cb1c9cf45b56dc327ea03b7bb179a997b5856a9322dcb160d 544 main/binary-amd64/Packages
+ 1364ff503b3f707cc4022e4d7c944f096e1a7bc5f55acf61afb7f3e71c244f8e 389 main/binary-amd64/Packages.gz
  56e5151f1dc03c3df2692545ad00cdacaf419474ecda8ed6ac004dccacdcc4cb 133 main/binary-amd64/Release
- 4bebc77af107b23e6ff1feed71dc4b1ca9722d2ff4f8206f8af176cf74c4a824 544 main/binary-arm64/Packages
- 0c59f7249678cee62f7af60b7f84acbb9d2d5a6c5f6fa3014676894b458ea881 390 main/binary-arm64/Packages.gz
+ b213fdd39971bdf6004a9f71667f3f7dd7291050c2eb6cd4f9b9c20cb784a48c 544 main/binary-arm64/Packages
+ 7301e20279127856254459c832919b723a29c9ac55e44c834567afaae08da7f1 391 main/binary-arm64/Packages.gz
  92f0a67052ba3bb110a1c4c8eec139aedb2d6854284122e88f40738276ee67be 133 main/binary-arm64/Release
