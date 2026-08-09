@@ -11,7 +11,7 @@ cleanup() {
 }
 trap cleanup EXIT
 
-curl -fL "${POSTMAN_DOWNLOAD_URL}" -o "${archive}"
+curl -fL --retry 5 --retry-all-errors --connect-timeout 15 "${POSTMAN_DOWNLOAD_URL}" -o "${archive}"
 rm -rf /opt/Postman
 mkdir -p /opt
 tar -xzf "${archive}" -C /opt
