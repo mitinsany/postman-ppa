@@ -2,9 +2,9 @@
 
 set -euo pipefail
 
-for postinstall in packages/latest/postman/*/postinstall; do
-    if ! rg -q -- '--retry 5 --retry-all-errors --connect-timeout 15' "${postinstall}"; then
-        echo "${postinstall} must retry transient download failures" >&2
-        exit 1
-    fi
-done
+postinstall_template='packages/latest/postman/common/postinstall.in'
+
+if ! rg -q -- '--retry 5 --retry-all-errors --connect-timeout 15' "${postinstall_template}"; then
+    echo "${postinstall_template} must retry transient download failures" >&2
+    exit 1
+fi
