@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 
 exec /opt/Postman/app/Postman "$@"
-

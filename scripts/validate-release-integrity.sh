@@ -16,11 +16,11 @@ has_pattern() {
 }
 
 echo "[I] Running shell syntax validation..."
-bash -n scripts/*.sh scripts/docker/*.sh
+bash -n scripts/*.sh scripts/docker/*.sh packages/latest/postman/common/postinstall.in packages/latest/postman/common/postremove
 
 echo "[I] Validating desktop files..."
 if command -v desktop-file-validate >/dev/null 2>&1; then
-    desktop-file-validate packages/latest/postman/*/root/usr/share/applications/postman.desktop
+    desktop-file-validate packages/latest/postman/common/root/usr/share/applications/postman.desktop
 else
     echo "[I] desktop-file-validate not installed; skipping desktop validation."
 fi
@@ -48,4 +48,3 @@ for arch in "${ARCHES[@]}"; do
 done
 
 echo "[I] Release integrity validation passed."
-

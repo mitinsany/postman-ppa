@@ -12,8 +12,9 @@ Main flows:
 ## Project Map
 
 - `scripts/update-packages.sh`: main automation entrypoint; fetches latest Postman version, updates templates, builds `.deb` packages, and includes them into the repo.
-- `scripts/build-single-deb.sh`: builds one Debian package from one architecture template folder.
-- `packages/latest/postman/<arch>/`: package templates for `amd64` and `arm64`.
+- `scripts/build-single-deb.sh`: renders shared install scripts with architecture metadata and builds one Debian package.
+- `packages/latest/postman/common/`: shared package payload and maintainer-script templates.
+- `packages/latest/postman/<arch>/package.json`: architecture-specific version, URL, and SHA-256 metadata.
 - `conf/`: `reprepro` configuration.
 - `deb/`: published APT repository contents.
 - `db/`: `reprepro` database files.
@@ -45,10 +46,9 @@ docker run --rm -it -v "$PWD:/app" postman-ppa-builder bash -lc "./scripts/updat
 - Scripts pass shell syntax checks:
   - `bash -n scripts/*.sh scripts/docker/*.sh`
 - Desktop files validate:
-  - `desktop-file-validate packages/latest/postman/*/root/usr/share/applications/postman.desktop`
+  - `desktop-file-validate packages/latest/postman/common/root/usr/share/applications/postman.desktop`
 - If versions changed:
-  - matching `preinstall` download URLs are updated;
+  - matching package metadata contains current download URLs and SHA-256 values;
   - changelog file exists at `changelogs/main/p/postman/postman_<version>`;
   - package files for `amd64` and `arm64` exist in `deb/pool/main/p/postman/`;
   - repo metadata files under `deb/dists/latest/` changed consistently.
-

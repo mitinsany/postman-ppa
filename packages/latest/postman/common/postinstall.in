@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+POSTMAN_DOWNLOAD_URL='@DOWNLOAD_URL@'
+POSTMAN_DOWNLOAD_SHA256='@DOWNLOAD_SHA256@'
+install_root='/opt'
+staging_dir="$(mktemp -d /opt/.postman-install.XXXXXX)"
+archive="$(mktemp /tmp/postman.XXXXXX.tar.gz)"
+previous_dir=''
+
+cleanup() {
+    rm -rf "${staging_dir}" "${archive}"
+}
+trap cleanup EXIT
+
+curl -fL --retry 5 --retry-all-errors --connect-timeout 15 "${POSTMAN_DOWNLOAD_URL}" -o "${archive}"
+printf '%s  %s\n' "${POSTMAN_DOWNLOAD_SHA256}" "${archive}" | sha256sum --check --status
+tar -xzf "${archive}" -C "${staging_dir}"
+
+staged_app="${staging_dir}/Postman"
+if [ ! -x "${staged_app}/app/Postman" ]; then
+    >&2 echo '[E] Postman binary was not found in the downloaded archive.'
+    exit 1
+fi
+
+chown -R root:root "${staged_app}"
+
+if [ -e /opt/Postman ]; then
+    previous_dir="${install_root}/.Postman.previous.$$"
+    mv /opt/Postman "${previous_dir}"
+fi
+
+if ! mv "${staged_app}" /opt/Postman; then
+    if [ -n "${previous_dir}" ] && [ -e "${previous_dir}" ]; then
+        mv "${previous_dir}" /opt/Postman
+    fi
+    >&2 echo '[E] Failed to install Postman.'
+    exit 1
+fi
+
+if [ -n "${previous_dir}" ]; then
+    rm -rf "${previous_dir}"
+fi

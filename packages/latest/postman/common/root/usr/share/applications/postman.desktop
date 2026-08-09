@@ -1,9 +1,9 @@
 [Desktop Entry]
 Name=Postman
-Exec=/opt/Postman/app/Postman
+Exec=/opt/Postman/app/Postman %U
 Comment=
 Terminal=false
 PrefersNonDefaultGPU=false
-Icon=/usr/share/pixmaps/postman.png
+Icon=/opt/Postman/app/resources/app/assets/icon.png
 Type=Application
 Categories=Development;
