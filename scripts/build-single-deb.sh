@@ -4,7 +4,6 @@ set -euxo pipefail
 
 PACKAGE_DIR="$1"
 CHANGELOG_FILE="$2"
-SIZE="$3"
 
 if [ -z "${PACKAGE_DIR}" ]; then
     >&2 echo "[E] Cannot find folder ${PACKAGE_DIR}"
@@ -39,7 +38,6 @@ fpm -t deb \
     -C "${ROOT_DIR}" \
     --name "${PACKAGE_NAME}" \
     --architecture "${ARCH}" \
-    --deb-installed-size "$(expr "${SIZE}" / 1024)" \
     --license "Postman Terms" \
     --maintainer "Aleksandr Mitin <mitinsoft@gmail.com>" \
     --vendor "https://www.postman.com/" \

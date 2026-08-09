@@ -24,11 +24,6 @@ download_url_for_arch() {
     printf "https://dl.pstmn.io/download/version/%s/%s\n" "${version}" "$(download_key_for_arch "${arch}")"
 }
 
-content_length_for_url() {
-    local url="$1"
-    curl -fsSIL "${url}" | awk 'BEGIN{IGNORECASE=1} /^content-length:/ {print $2}' | tr -d '\r' | tail -n 1
-}
-
 update_package_template() {
     local package_dir="$1"
     local version="$2"
@@ -84,12 +79,6 @@ find "packages/${CHANNEL}/postman" -mindepth 1 -maxdepth 1 -type d -print0 | sor
     arch="$(jq --raw-output --exit-status '.architecture' "${package_json}")"
     code="$(jq --raw-output --exit-status '.code' "${package_json}")"
     download_url="$(download_url_for_arch "${remote_version}" "${arch}")"
-    size="$(content_length_for_url "${download_url}")"
-
-    if [ -z "${size}" ] || ! [[ "${size}" =~ ^[0-9]+$ ]] || [ "${size}" -le 0 ]; then
-        >&2 echo "[E] Cannot read content length for ${download_url}"
-        exit 1
-    fi
 
     if ! compare_version "${local_version}" "${remote_version}"; then
         >&2 printf "[I] %s: Local (%s) >= Remote (%s). Skipped.\n" "${code}" "${local_version}" "${remote_version}"
@@ -103,7 +92,7 @@ find "packages/${CHANNEL}/postman" -mindepth 1 -maxdepth 1 -type d -print0 | sor
     changelog_filename="changelog-postman-${remote_version}-${arch}.dsc"
     printf "%s\n" "${release_body}" > "/tmp/${changelog_filename}"
     rm -f /tmp/postman_"${remote_version}"_"${arch}".deb
-    "${ROOT_DIR}/scripts/build-single-deb.sh" "${package_dir}" "${changelog_filename}" "${size}"
+    "${ROOT_DIR}/scripts/build-single-deb.sh" "${package_dir}" "${changelog_filename}"
     deb_file="/tmp/postman_${remote_version}_${arch}.deb"
     reprepro --outdir ./deb --ignore=unknownfield -C main includedeb "${CHANNEL}" "${deb_file}"
     echo "Upgrade ${code}: ${local_version} -> ${remote_version}" >> "commit.txt"
