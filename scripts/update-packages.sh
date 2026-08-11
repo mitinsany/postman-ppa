@@ -6,7 +6,7 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 RELEASE_NOTES_URL="https://mkt.cdn.postman.com/www-next/release-notes/app-release-notes.json"
 CHANGELOGS_DIR="${ROOT_DIR}/changelogs/main/p/postman"
 CHANNEL="latest"
-DEBIAN_REVISION="1"
+DEBIAN_REVISION="2"
 
 download_key_for_arch() {
     case "$1" in
@@ -28,8 +28,17 @@ download_url_for_arch() {
 download_archive_for_url() {
     local url="$1"
     local archive
+    local http_status
     archive="$(mktemp)"
-    if ! curl -fL --retry 5 --retry-all-errors --connect-timeout 15 "${url}" -o "${archive}"; then
+
+    http_status="$(curl -sSIL --connect-timeout 15 --output /dev/null --write-out '%{http_code}' "${url}")"
+    if [ "${http_status}" = "404" ]; then
+        >&2 echo "[I] Postman archive is not published yet: ${url}"
+        rm -f "${archive}"
+        return 10
+    fi
+
+    if ! curl -fL --retry 3 --retry-all-errors --connect-timeout 15 "${url}" -o "${archive}"; then
         rm -f "${archive}"
         return 1
     fi
@@ -108,7 +117,16 @@ for arch in amd64 arm64; do
     fi
 
     printf "[I] %s: Local (%s) -> Remote (%s). Updating.\n" "${code}" "${local_version}" "${remote_package_version}"
-    archive="$(download_archive_for_url "${download_url}")"
+    if archive="$(download_archive_for_url "${download_url}")"; then
+        :
+    else
+        download_status=$?
+        if [ "${download_status}" -eq 10 ]; then
+            >&2 echo "[I] Skipping update until Postman publishes every versioned archive."
+            exit 0
+        fi
+        exit "${download_status}"
+    fi
     download_sha256="$(sha256sum "${archive}" | awk '{print $1}')"
     rm -f "${archive}"
 

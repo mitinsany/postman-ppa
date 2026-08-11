@@ -14,7 +14,7 @@ cleanup() {
 }
 trap cleanup EXIT
 
-curl -fL --retry 5 --retry-all-errors --connect-timeout 15 "${POSTMAN_DOWNLOAD_URL}" -o "${archive}"
+curl -fL --retry 3 --retry-all-errors --connect-timeout 15 "${POSTMAN_DOWNLOAD_URL}" -o "${archive}"
 printf '%s  %s\n' "${POSTMAN_DOWNLOAD_SHA256}" "${archive}" | sha256sum --check --status
 tar -xzf "${archive}" -C "${staging_dir}"
 
