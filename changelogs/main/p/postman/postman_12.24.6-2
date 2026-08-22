@@ -1,0 +1,5 @@
+## Postman 12.24.6
+August 22, 2026
+### Bug Fixes
+- Resolve issue with FormData support in some HTTP requests
+
