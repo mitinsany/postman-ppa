@@ -1,5 +1,5 @@
 Package: postman
-Version: 12.26.3-2
+Version: 12.26.4-2
 License: Postman Terms
 Vendor: https://www.postman.com/
 Architecture: arm64
@@ -9,10 +9,10 @@ Depends: curl, tar, gzip
 Homepage: https://www.postman.com/
 Priority: optional
 Section: devel
-Filename: pool/main/p/postman/postman_12.26.3-2_arm64.deb
+Filename: pool/main/p/postman/postman_12.26.4-2_arm64.deb
 Size: 2000
-SHA256: 84148d45a27d333d8f70cc89b576e04fec5a7d193a61c8ba54ca28bb8de353c9
-SHA1: b1af2614c31de8dec957396f41b1a6137f32a35c
-MD5sum: 5dec67ae0923be8e50a47874f755e0a8
+SHA256: 61944c05364516b4c9e32feebb699f30d976b3a6e8b6b97f8d97e9acd5be47a2
+SHA1: 9c7850bb7a2b1489359af005f1e119e2af8c24eb
+MD5sum: e8741e9ca600b08723cfbb8e1bad5c15
 Description: Postman API Platform
 
