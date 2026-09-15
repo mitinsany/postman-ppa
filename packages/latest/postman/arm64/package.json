@@ -1,10 +1,10 @@
 {
   "code": "postman-arm64",
   "package": "postman",
-  "version": "12.28.0-2",
-  "upstream_version": "12.28.0",
+  "version": "12.28.1-2",
+  "upstream_version": "12.28.1",
   "architecture": "arm64",
   "description": "Postman API Platform",
-  "download_url": "https://dl.pstmn.io/download/version/12.28.0/linux_arm64",
-  "download_sha256": "b9b3625c073befbd60cd9b88d2e51531078940a2f9a3a8a0c3d57bed09c6d6e3"
+  "download_url": "https://dl.pstmn.io/download/version/12.28.1/linux_arm64",
+  "download_sha256": "beb8293a508df416662b467e5a9bcd16475a3f84949e0cd72c7fa9b1bebd985f"
 }
