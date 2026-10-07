@@ -138,7 +138,7 @@ for arch in amd64 arm64; do
     rm -f /tmp/postman_"${remote_package_version}"_"${package_arch}".deb
     "${ROOT_DIR}/scripts/build-single-deb.sh" "${package_dir}" "${changelog_filename}"
     deb_file="/tmp/postman_${remote_package_version}_${package_arch}.deb"
-    reprepro --outdir ./deb --ignore=unknownfield -C main includedeb "${CHANNEL}" "${deb_file}"
+    reprepro --keepunreferencedfiles --outdir ./deb --ignore=unknownfield -C main includedeb "${CHANNEL}" "${deb_file}"
     echo "Upgrade ${code}: ${local_version} -> ${remote_package_version}" >> "commit.txt"
 done
 
