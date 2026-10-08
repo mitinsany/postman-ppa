@@ -3,46 +3,46 @@ Hash: SHA512
 
 Label: postman
 Codename: latest
-Date: Wed, 07 Oct 2026 10:57:36 UTC
+Date: Thu, 08 Oct 2026 11:14:41 UTC
 Architectures: amd64 arm64
 Components: main
 Changelogs: https://mitinsany.github.io/postman-ppa/changelogs/@CHANGEPATH@
 Description: Postman
 Custom apt repository for Postman (https://www.postman.com/)
 MD5Sum:
- 30a95beee8118f3f2b5052f0418d161c 539 main/binary-amd64/Packages
- 33a891656430e9f9d609f579d0cb7a4e 388 main/binary-amd64/Packages.gz
+ 41dc64461145454da9200433f655ec24 539 main/binary-amd64/Packages
+ 97580cc91723d3ab4cda49cff2ea7bce 388 main/binary-amd64/Packages.gz
  10e9c92f7959a6ad08a0227198994c20 133 main/binary-amd64/Release
- b2778fbf78097ddeee6e56548c100854 539 main/binary-arm64/Packages
- f4e4e6bee6bf3b3cc0ad7955d01e8d95 388 main/binary-arm64/Packages.gz
+ 96d8b579c091f9132cf8c904ca19f70b 539 main/binary-arm64/Packages
+ af368c0fad723c1d923bb9ac660d5115 388 main/binary-arm64/Packages.gz
  2b586695b5a89424625646d1e73fb18e 133 main/binary-arm64/Release
 SHA1:
- 9a8ce7aa74b927e60590beb18b1d075f135f50d4 539 main/binary-amd64/Packages
- e1f980048e3515a4788e18bc46f490c28de85555 388 main/binary-amd64/Packages.gz
+ 29eb98ef91e66719e7eda438400b39c00a3b3d2a 539 main/binary-amd64/Packages
+ 5e03f79dc84d74d6720511841d5e1ab4ce6c9c97 388 main/binary-amd64/Packages.gz
  ee594c7b6231f7f6843bbf59ad94dc036e799bb8 133 main/binary-amd64/Release
- 530d6548bd65c2c49f636573b27837fbd074bb25 539 main/binary-arm64/Packages
- 02cd392f65c899c0cea1fbe64d6f8d936101f9b1 388 main/binary-arm64/Packages.gz
+ 9e3182f6eef731a07ab5be5a4a9a7ea09e78b4fb 539 main/binary-arm64/Packages
+ 0c65acfc0d1eb1bece8d2609b0730ef960d67cc9 388 main/binary-arm64/Packages.gz
  82902ae11650845b99e5f320f0e6e42e96c29ff5 133 main/binary-arm64/Release
 SHA256:
- 28f4a3387a475473fa93bfbb8ad44a7806f91d86609539e59a49b65e3c334ff8 539 main/binary-amd64/Packages
- e3711fd5a80feec43d77d9cc2ba6ba45af66a0e8982ab07ca5f82af5a58cfadb 388 main/binary-amd64/Packages.gz
+ 8f71f055da90ef1cb46c3f5b345068021d73bf4110a14c8fa0baf88f95a21161 539 main/binary-amd64/Packages
+ 55e429d99cdfd0343efd1f57715d8426c7042f536fd2d3f05cb89f9d40aef77c 388 main/binary-amd64/Packages.gz
  56e5151f1dc03c3df2692545ad00cdacaf419474ecda8ed6ac004dccacdcc4cb 133 main/binary-amd64/Release
- 4e64746b05ef7e309960f9c81c9b83c8b317fd0c6e41d39acd5bff0cdc81039e 539 main/binary-arm64/Packages
- 753dec3b7c1ba8d2c0bce471a804f0e4a6c5d8b8b4f5a3062fa8bf73e94d7c24 388 main/binary-arm64/Packages.gz
+ 71ecccecb6fc2d5fd3ed4784173dd417b758d37570691b3168ec999b97c6dc09 539 main/binary-arm64/Packages
+ 6fa8e5a471af6191ce8f6db90344f6d6219b5796aedda61e5baf3bafb191ecd9 388 main/binary-arm64/Packages.gz
  92f0a67052ba3bb110a1c4c8eec139aedb2d6854284122e88f40738276ee67be 133 main/binary-arm64/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEE1T3OgAZisUp0g/DhzWpAqLWJ9zQFAmrGJaEACgkQzWpAqLWJ
-9zTa2w//TduppG74Ymfb4NrPfxWdzDOJN1dwFXkiNFPM9cRcTZxkyml/Rb7JmC0s
-pf2TypD2BHZ4T/fW/VFcnr5Agx9+fjKPqtjTPNDJmGAaYGQq4RMwhyRxMUXYcJcD
-lgFzkTKYWZwisr6PAv3mxIpwn7hl/RXZQJs8WzyscZ1zzJaiPR3ujMWP5W8p+HzX
-ULEecJpP8nwlNQiqy4zw6lxiteg4VbOuLzR9dwbkwHy3VzcueJtTikkslm0b1/Ci
-x340lqiY9cFiZvx9rNFuOpbeMkqKIDwTK3vuU2Z/nNghRnMSCk02EIAPoSlftH/a
-wD39zXzE7pQlNoobTtJBPUaoXErS3zc7jsIcMc2GHHhjNzUp01TYOKquJIXTDTVC
-bZ2m/kZ+SwTOdsHCP25zoNnoSLS+jfuHLMd7iOP1E0uJwi0y+LeVb7BEorNnAsl6
-p4Ldq1l8UZYyYKidSIgZm9Ds2kSfJwkL8C6O/ggzlld7nNEMEN0T0b/xNdA0M9UY
-Y+xvLIh01SGvPanxRmdVzVjk61LwmVrWx9RkADhlJEBy5eBAi4C+YpE+hiXK043m
-g2zhx8FvpcfjJ367hAAC2HpQGHB/uFvxPmhjfHUJbwtCSKR9yDvPFX2sUbtOYB86
-31c1B7sb+Ef0018rHzTbcE6NfsxLsQY3svHGms4KP73ssh42fdw=
-=n63X
+iQIzBAEBCgAdFiEE1T3OgAZisUp0g/DhzWpAqLWJ9zQFAmrHeyEACgkQzWpAqLWJ
+9zQt4RAAh1uLgOgpBU8NWMQHBwxuUw4/lXk8syfL4H6j1pnR7kD7D9PTjHoDwViR
+68QP4FkkFh2FT48QlD06gvxebSbD0ACHLkyuWeVGpfcAtYPql877JsuYCQlmhEvu
+On4Y5xRkTPn9gFNQc1RRspVJWSmLfQLGnfflLYzWKB0w0bGLFaQMZJzuABGc8XXc
+2BxTHGgNpTBNCQzPs1AWfC93AIj57QGKKgClJsHVl9nHSHeU803ufL+4tK71rqGz
+d6/qHUic2HPYr56xhA7sWsaBaJU+aXQN99YhaLYqnlhsKmnPiRynyv5J7kftYezM
+NuktjNa0i3dsmBG27LCKppKTXmCylT+qzUebJkZqLCHQW3lioGhY3zEZKjsjukKL
+tH2VS/gqZWGO/+8ewqjxKRx6C17CoVX6roVwjKKlfnR+XI8NzgU+7sbTY2VsNfZy
+PCBVUKY70FnYABaPNCugveoGV7H5EftuN0O/2ixW8ZLp+CIszxs0YoYIGthCjvwh
+1wUgblCx6f8jLh/3RCekYeRPlSM8mjgg3/jyLKQATg5t4IfL9z0Mvo6VjZbXHcqW
+fimfBw7A7JX4MHJGwh1mU/kYK/l2KRH1KRMCFFfQH+L5i+Ng3e3DqDSPd5lFSKOS
+L5sLi6Y+20NQD3/H07EQ8rZJzmEWkpfheWIumDuXncqE32lvtF4=
+=05RO
 -----END PGP SIGNATURE-----
