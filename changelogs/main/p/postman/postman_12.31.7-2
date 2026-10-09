@@ -1,0 +1,8 @@
+## Postman 12.31.7
+October 9, 2026
+
+### What’s New
+#### The Postman CLI is included with the Postman app
+
+When you install or update the Postman app, the Postman CLI is now installed with it. You can use Postman from your terminal and from coding agents without a separate download.
+
