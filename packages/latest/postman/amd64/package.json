@@ -1,10 +1,10 @@
 {
   "code": "postman-amd64",
   "package": "postman",
-  "version": "12.33.2-2",
-  "upstream_version": "12.33.2",
+  "version": "12.33.3-2",
+  "upstream_version": "12.33.3",
   "architecture": "amd64",
   "description": "Postman API Platform",
-  "download_url": "https://dl.pstmn.io/download/version/12.33.2/linux64",
-  "download_sha256": "e374f14effa607f63d6259354e47ff322b6e0c77a60f6ceedc9bf3af55577f04"
+  "download_url": "https://dl.pstmn.io/download/version/12.33.3/linux64",
+  "download_sha256": "624cd12d7bb3e4246702411ce80560eec1d3892f398aad6778a76ce4fc8a6825"
 }
