@@ -1,5 +1,5 @@
 Package: postman
-Version: 12.34.0-2
+Version: 12.34.1-2
 License: Postman Terms
 Vendor: https://www.postman.com/
 Architecture: amd64
@@ -9,10 +9,10 @@ Depends: curl, tar, gzip
 Homepage: https://www.postman.com/
 Priority: optional
 Section: devel
-Filename: pool/main/p/postman/postman_12.34.0-2_amd64.deb
-Size: 1994
-SHA256: 1116b3a03687edf52df728b55621b13f90fad564eaeb530ecc1ad1805cae5100
-SHA1: 5dffc115f83ca997ea6e9e95a70262a47667e7e6
-MD5sum: c497229ccceb6702a8a021e2552aeb68
+Filename: pool/main/p/postman/postman_12.34.1-2_amd64.deb
+Size: 1998
+SHA256: d52798c9d7a49ad53532914d3144b00de073dbbcc96264ef755233bc22cd884d
+SHA1: c943152a2bebc72103f73e56f02096a7435e7a7a
+MD5sum: cec1fb38f57317dcfc73ceece2b76474
 Description: Postman API Platform
 
