@@ -6,7 +6,7 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 RELEASE_NOTES_URL="https://mkt.cdn.postman.com/www-next/release-notes/app-release-notes.json"
 CHANGELOGS_DIR="${ROOT_DIR}/changelogs/main/p/postman"
 CHANNEL="latest"
-DEBIAN_REVISION="2"
+DEBIAN_REVISION="3"
 
 download_key_for_arch() {
     case "$1" in
@@ -38,7 +38,7 @@ download_archive_for_url() {
         return 10
     fi
 
-    if ! curl -fL --retry 3 --retry-all-errors --connect-timeout 15 "${url}" -o "${archive}"; then
+    if ! curl -fL --retry 3 --connect-timeout 15 "${url}" -o "${archive}"; then
         rm -f "${archive}"
         return 1
     fi

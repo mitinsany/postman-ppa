@@ -4,7 +4,7 @@ set -euo pipefail
 
 script='scripts/update-packages.sh'
 
-rg -q -- '--retry 3 --retry-all-errors --connect-timeout 15' "${script}"
+rg -q -- '--retry 3 --connect-timeout 15' "${script}"
 if rg -q -- '--retry 5' "${script}"; then
     echo 'The release updater must use at most three retries.' >&2
     exit 1

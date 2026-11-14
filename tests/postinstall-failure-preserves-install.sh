@@ -2,7 +2,8 @@
 
 set -euo pipefail
 
-deb_file="deb/pool/main/p/postman/postman_12.22.8-1_amd64.deb"
+version="$(jq -r '.version' packages/latest/postman/amd64/package.json)"
+deb_file="deb/pool/main/p/postman/postman_${version}_amd64.deb"
 
 docker run --rm --network none -v "$(pwd):/repo:ro" ubuntu:26.04 bash -lc '
     set -euo pipefail
